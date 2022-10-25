@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System;
 
 using CodeChallenge.Models;
 
@@ -43,9 +44,8 @@ namespace CodeCodeChallenge.Tests.Integration
             var getResponse = getRequestTask.Result;
             Assert.AreEqual(HttpStatusCode.OK, getResponse.StatusCode);
             var reportingStructure = getResponse.DeserializeContent<ReportingStructure>();
-
+            Console.WriteLine(new JsonSerialization().ToJson(reportingStructure));
             Assert.AreEqual(4, reportingStructure.NumberOfReports);
-            
         }
 
         [TestMethod]

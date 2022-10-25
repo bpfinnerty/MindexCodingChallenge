@@ -39,7 +39,7 @@ namespace CodeCodeChallenge.Tests.Integration
             // Arrange
             var compensation = new Compensation()
             {
-                CompensationId = "16a596ae-edd3-4847-99fe-c4518e82c86f",
+                CompensationId = "b7839309-3348-463b-a7e3-5de1c168beb3",
                 Salary = 86000,
                 EffectiveDate = "2022-01-01",
             };
@@ -119,7 +119,7 @@ namespace CodeCodeChallenge.Tests.Integration
         public void GetCompensation_Returns_NotFound()
         {
             // Arrange
-            var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
+            var employeeId = "03aa1462-ffa9-4978-901b-7c001562cf6f";
             // Execute
             var getRequestTask = _httpClient.GetAsync($"api/compensation/{employeeId}");
             var getResponse = getRequestTask.Result;
